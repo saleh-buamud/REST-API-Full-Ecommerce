@@ -36,7 +36,7 @@ class BrandController extends Controller
                 'brand' => $brand,
             ]);
         } catch (\Exception $e) {
-            return response()->json(['message' => 'Something went wrong'], 500);
+            return response()->json(['message' => 'Something went wrong', 'error' => $e], 500);
         }
     }
 
